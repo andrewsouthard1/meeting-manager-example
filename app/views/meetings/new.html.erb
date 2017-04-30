@@ -10,5 +10,8 @@
 <p>start_time: <input type="datetime-local" name="start_time" value="<%= @meeting.start_time_formatted %>"></p>
 <p>end_time: <input type="datetime-local" name="end_time" value="<%= @meeting.end_time_formatted %>"></p>
 <p>notes: <input name="notes" value="<%= @meeting.notes %>"></p>
+<% @tags.each do |tag| %>
+  <input type ="checkbox" value=""><%= tag.name %>
+<% end %>
 <input type="submit" value="Make a new Meeting">
 <% end %>

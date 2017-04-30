@@ -1,0 +1,10 @@
+Edit page
+
+<%= form_tag "/meetings/#{@meeting.id}", method: :put do %>
+  <p>name <input name="name" value="<%= @meeting.name %>"></p>
+  <p>address  <input name="address" value="<%= @meeting.address %>"></p>
+  <p>start_time  <input name="start_time" type="datetime-local" value="<%= @meeting.start_time_formatted %>"></p>
+  <p>end_time<input name="end_time" type="datetime-local" value="<%= @meeting.end_time_formatted %>"></p>
+  <p>notes<input name="notes" value="<%= @meeting.notes %>"></p>
+  <input type="submit" value="Update Meeting Info">
+<% end %>
